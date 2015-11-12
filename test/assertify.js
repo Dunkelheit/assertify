@@ -3,7 +3,7 @@
 var assertify = require('../lib/assertify');
 
 var foo = {
-    stores: {
+    'sto-res': {
         total: 3,
         offset: 0,
         data: [{
@@ -70,8 +70,11 @@ var foo = {
     }
 };
 
-assertify(foo);
+assertify(foo, {
+    variableName: 'foo'
+});
 
+/*
 var store = {
     id: '3605',
     name: 'Fnac Preciados',
@@ -90,4 +93,4 @@ var store = {
     newStore: true
 };
 
-assertify(store);
+assertify(store);*/
