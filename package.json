@@ -1,6 +1,6 @@
 {
   "name": "assertify",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Given an object literal, generate a number of Chai assertions for it",
   "main": "lib/index.js",
   "scripts": {
