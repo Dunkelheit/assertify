@@ -2,7 +2,7 @@
 
 Automatically generates `chai` assertions.
 
-## Usage
+## Example
 
 ```javascript
 var assertify = require('assertify');
@@ -63,3 +63,18 @@ chai.expect(store.newStore).to.be.a('boolean');
 chai.expect(store.newStore).to.be.eql('true');
 
 ```
+
+## Usage
+
+### assertify(variable, options)
+
+**Arguments**
+
+* `variable` - Anything you want to make assertions for
+* `options` - An optional object defining a number of options
+* `options.variableName` - The variable name to render, by default `'var'`
+* `options.includeTypes` - Whether to include assertions to check the value type, by default `true`
+
+## License
+
+[MIT](LICENSE)
