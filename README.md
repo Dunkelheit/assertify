@@ -2,6 +2,8 @@
 
 Automatically generates `chai` assertions.
 
+For lazy developers that want to quickly write their unit tests.
+
 ## Example
 
 ```javascript
@@ -71,9 +73,9 @@ chai.expect(store.newStore).to.be.eql('true');
 **Arguments**
 
 * `variable` - Anything you want to make assertions for
-* `options` - An optional object defining a number of options
-* `options.variableName` - The variable name to render, by default `'var'`
-* `options.includeTypes` - Whether to include assertions to check the value type, by default `true`
+* `options` - An optional object defining a number of options:
+    * `variableName` - The variable name to render, by default `'var'`
+    * `includeTypes` - Whether to include assertions to check the value type, by default `true`
 
 ## License
 
