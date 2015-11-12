@@ -1,9 +1,11 @@
 'use strict';
 
+// TODO: Proper mocha tests
+
 var assertify = require('../lib/assertify');
 
 var foo = {
-    'sto-res': {
+    stores: {
         total: 3,
         offset: 0,
         data: [{
@@ -21,7 +23,7 @@ var foo = {
             }],
             type: 'store',
             homeStore: false,
-            newStore: true
+            newStore: true,
         }, {
             id: '4670',
             name: 'Tattoo Joris & Co. Electric Tattooing',
@@ -67,30 +69,16 @@ var foo = {
                 title: 'Open until 22:00'
             }]
         }]
+    },
+    'meta-data': {
+        'session identifier': 'Y119310803'
     }
 };
 
-assertify(foo, {
+var assertions = assertify(foo, {
     variableName: 'foo'
 });
+var chai = require('chai');
+var assert = new Function('chai', 'foo', assertions);
 
-/*
-var store = {
-    id: '3605',
-    name: 'Fnac Preciados',
-    street: 'Calle Preciados, 28',
-    zip: '28013',
-    city: 'Madrid',
-    latitude: 40.419027,
-    longitude: -3.705254,
-    openingTimes: [{
-        date: 1439456166345,
-        time: '08:00 - 20:00',
-        today: true
-    }],
-    type: 'store',
-    homeStore: false,
-    newStore: true
-};
-
-assertify(store);*/
+console.log('Ok');

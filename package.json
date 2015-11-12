@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/Dunkelheit/assertify/issues"
   },
-  "homepage": "https://github.com/Dunkelheit/assertify"
+  "homepage": "https://github.com/Dunkelheit/assertify",
+  "devDependencies": {
+    "chai": "^3.4.1"
+  }
 }
