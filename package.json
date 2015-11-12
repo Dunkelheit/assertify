@@ -1,5 +1,5 @@
 {
-  "name": "lazy-chai-assertions",
+  "name": "assertify",
   "version": "0.0.1",
   "description": "Given an object literal, generate a number of Chai assertions for it",
   "main": "lib/index.js",
@@ -8,17 +8,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Dunkelheit/lazy-chai-assertions.git"
+    "url": "https://github.com/Dunkelheit/assertify.git"
   },
   "keywords": [
     "chai",
     "assertions",
-    "test"
+    "test",
+    "assertify",
+    "automatic"
   ],
   "author": "Arturo Martinez <dunkelheit@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Dunkelheit/lazy-chai-assertions/issues"
+    "url": "https://github.com/Dunkelheit/assertify/issues"
   },
-  "homepage": "https://github.com/Dunkelheit/lazy-chai-assertions"
+  "homepage": "https://github.com/Dunkelheit/assertify"
 }
