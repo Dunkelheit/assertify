@@ -1,0 +1,24 @@
+{
+  "name": "lazy-chai-assertions",
+  "version": "0.0.1",
+  "description": "Given an object literal, generate a number of Chai assertions for it",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Dunkelheit/lazy-chai-assertions.git"
+  },
+  "keywords": [
+    "chai",
+    "assertions",
+    "test"
+  ],
+  "author": "Arturo Martinez <dunkelheit@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Dunkelheit/lazy-chai-assertions/issues"
+  },
+  "homepage": "https://github.com/Dunkelheit/lazy-chai-assertions"
+}
