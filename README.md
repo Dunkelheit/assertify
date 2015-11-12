@@ -26,9 +26,10 @@ var store = {
     newStore: true
 };
 
+// Just assertify it
 assertify(store);
 
-// Outputs
+// The console will output:
 chai.expect(var).to.be.an('object');
 chai.expect(var).to.have.keys('id', 'name', 'street', 'zip', 'city', 
     'latitude', 'longitude', 'openingTimes', 'type', 'homeStore', 'newStore');
