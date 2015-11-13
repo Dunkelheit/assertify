@@ -2,9 +2,9 @@
   "name": "assertify",
   "version": "0.3.0",
   "description": "Given an object literal, generate a number of Chai assertions for it",
-  "main": "lib/index.js",
+  "main": "lib/assertify.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "gulp test"
   },
   "repository": {
     "type": "git",
@@ -15,7 +15,8 @@
     "assertions",
     "test",
     "assertify",
-    "automatic"
+    "automatic",
+    "bdd"
   ],
   "author": "Arturo Martinez <dunkelheit@gmail.com>",
   "license": "MIT",
@@ -24,6 +25,13 @@
   },
   "homepage": "https://github.com/Dunkelheit/assertify",
   "devDependencies": {
-    "chai": "^3.4.1"
+    "chai": "^3.4.1",
+    "gulp": "^3.9.0",
+    "gulp-istanbul": "^0.10.2",
+    "gulp-jshint": "^1.12.0",
+    "gulp-mocha": "^2.1.3",
+    "gulp-shell": "^0.5.1",
+    "jsdoc": "^3.3.3",
+    "jshint-stylish": "^2.0.1"
   }
 }

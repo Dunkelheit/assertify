@@ -74,7 +74,7 @@ chai.expect(store.newStore).to.be.eql('true');
 
 * `variable` - Anything you want to make assertions for
 * `options` - An optional object defining a number of options:
-    * `variableName` - The variable name to render, by default `'var'`
+    * `variableName` - The variable name to render, by default `'foo'`
     * `includeTypes` - Whether to include assertions to check the value type, by default `true`
     * `console` - If truthy, will `console.log` the chai assertions. Can also be a function in case you want custom logging. By default `false`.
 

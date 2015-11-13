@@ -1,6 +1,6 @@
 'use strict';
 
-// TODO: Proper mocha tests
+var chai = require('chai');
 
 var assertify = require('../lib/assertify');
 
@@ -23,7 +23,7 @@ var foo = {
             }],
             type: 'store',
             homeStore: false,
-            newStore: true,
+            newStore: true
         }, {
             id: '4670',
             name: 'Tattoo Joris & Co. Electric Tattooing',
@@ -75,10 +75,61 @@ var foo = {
     }
 };
 
-var assertions = assertify(foo, {
-    variableName: 'foo'
-});
-var chai = require('chai');
-var assert = new Function('chai', 'foo', assertions);
+describe('Assertify', function () {
 
-console.log('Ok');
+    it('Generates valid assertions for a complex object', function (done) {
+        var assertions = assertify(foo, {
+            variableName: 'foo'
+        });
+
+        var assert = new Function('chai', 'foo', assertions);
+        assert(chai, foo);
+        done();
+    });
+
+
+    describe('Configuration', function () {
+
+        it('Skips assertifying types', function (done) {
+            var assertions = assertify(foo, {
+                variableName: 'foo',
+                includeTypes: false
+            });
+
+            var assert = new Function('chai', 'foo', assertions);
+            assert(chai, foo);
+            done();
+        });
+
+        it('Allows printing with console.log', function (done) {
+            var assertions = assertify(foo, {
+                variableName: 'foo',
+                console: true
+            });
+
+            var assert = new Function('chai', 'foo', assertions);
+            assert(chai, foo);
+            done();
+        });
+
+        it('Allows custom printing', function (done) {
+            var assertions = assertify(foo, {
+                variableName: 'foo',
+                console: console.error
+            });
+
+            var assert = new Function('chai', 'foo', assertions);
+            assert(chai, foo);
+            done();
+        });
+
+        it('Defaults the variable name to "foo"', function (done) {
+            var assertions = assertify(foo);
+            console.log(assertions);
+            var assert = new Function('chai', 'foo', assertions);
+            assert(chai, foo);
+            done();
+        });
+
+    });
+});
